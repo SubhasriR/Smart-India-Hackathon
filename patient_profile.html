@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patient Profile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Date Picker -->
+    <link href="dist/css/window-date-picker.css" rel="stylesheet">
+	<script src="dist/js/window-date-picker.js"></script>
+</head>
+
+<body>
+	<div class="md-form">
+		<form class="border border-light p-5" style="width: 500px; ">
+			<p class="h4 mb-4 text-center" style="">Patient Profile</p>
+			<div id="rpage">
+			
+			<input placeholder="Name" class="form-control mb-4" type="text" id="myname" onblur="validname()">
+			<span id="vname" ></span><br>
+		
+			Gender:
+			<input type="radio" name="gender" value="male" > Male
+			<input type="radio" name="gender" value="female"> Female<br>
+			<br>
+
+			<div class="row">
+				<div class="col">
+				<!-- <input type="date" id="db" class="form-control">-->
+					<div id="picker"></div>
+					<input class="form-control mb-4" type="date" placeholder="Date of Birth" id="db" class="form-control">
+					<button id="toggle"><i class="far fa-calendar-alt"></i></button>
+				</div>
+			
+				<div class="col">
+					<input class="form-control mb-4" placeholder="Age" type="number" id="age" class="form-control" onblur="validage()">
+				</div>
+			</div>
+			<br>
+		
+			<input placeholder="E-mail" class="form-control mb-4" type="text" id="email" onblur="validemail()">
+			<span id="vemail"></span>
+	
+			<input placeholder="Phone Number" class="form-control mb-4" type="tel" id="phno" onblur="validphno()">
+			<span id="vphno"></span>
+
+			<input placeholder="Address" class="form-control mb-4" type="text"cols="40" id="Text1" onblur="validaddress()"rows="5" />
+			<span id="vadd"></span>
+	
+			<input placeholder="Emergency Contact Number" class="form-control mb-4" type="tel" id="phno1" onblur="validphno1()">
+			<span id="vphno1"></span>
+	 
+			<button value="Submit" class="btn btn-info btn-block my-4" id="vsubmit" onclick="test1()" type="submit">Sign in</button>
+
+			</div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		function test1()
+		{
+			var mn=document.getElementById("myname").value;
+		    var actualname=/^[a-zA-Z]+$/;
+			var em=document.getElementById("email").value;
+			var pn=document.getElementById("phno").value;
+			var add=document.getElementById("Text1").value;
+			var pn1=document.getElementById("phno1").value;
+			
+		    if(!actualname.test(mn))   {alert("Please enter a valid name");}
+				
+			else{
+					
+					var actualem=/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+					if(!actualem.test(em))
+					{
+						alert("Enter valid email id!")
+					}
+							
+					else{
+						var actualpn=/^[0-9]{10}$/;
+						if(!actualpn.test(pn)){alert("Enter valid phone number!")}
+						else{
+							var actualadd=/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))/;
+							if(!actualadd.test(add)){alert("Enter valid address!")}
+								else
+								{
+									var actualpn1=/^[0-9]{10}$/;
+									if(!actualpn1.test(pn1)){alert("Enter valid phone number!")}
+									else{
+										alert("Registration successful");							
+										}
+								}
+							}
+						}
+				}
+		}
+
+	function validname()
+	{
+		var mn=document.getElementById("myname").value;
+			var actualname=/^[a-zA-Z]+$/;
+			if(!actualname.test(mn))   {  var hp1=document.getElementById("vname");
+			    hp1.style.color="red";  
+			   	document.getElementById("vname").innerHTML="Invalid name.";     }
+			else
+			{
+			   	document.getElementById("vname").innerHTML=" "; 
+			}
+	}
+
+	function validemail()
+	{
+		var em=document.getElementById("email").value;
+		var actualem=/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+			if(!actualem.test(em))
+			{
+				var hp1=document.getElementById("vemail");
+			    hp1.style.color="red";  
+				document.getElementById("vemail").innerHTML="Invalid email";
+			}
+			else
+			{
+				document.getElementById("vemail").innerHTML="";
+			}
+	}
+
+	function validphno()
+	{
+		var pn=document.getElementById("phno").value;
+		var actualpn=/^[0-9]{10}$/;
+			if(!actualpn.test(pn))
+			{
+				var hp1=document.getElementById("vphno");
+			    hp1.style.color="red";  
+				document.getElementById("vphno").innerHTML="Invalid phone number";
+			}
+			else {document.getElementById("vphno").innerHTML="";}
+	}
+
+	function validphno1()
+	{
+		var pn=document.getElementById("phno1").value;
+		var actualpn=/^[0-9]{10}$/;
+			if(!actualpn.test(pn))
+			{
+				var hp1=document.getElementById("vphno1");
+			    hp1.style.color="red";  
+				document.getElementById("vphno1").innerHTML="Invalid phone number";
+			}
+			else {document.getElementById("vphno1").innerHTML="";}
+	}
+
+	function validaddress()
+	{
+		var mn=document.getElementById("Text1").value;
+		var actualname=/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))/;
+		if(!actualname.test(mn))   
+			{
+				var hp1=document.getElementById("vadd");
+		   		hp1.style.color="red";  
+			    document.getElementById("vadd").innerHTML="Invalid address.";     }
+		else
+		{
+		   	document.getElementById("vadd").innerHTML=""; 
+		}
+	}
+
+	function validage()
+	{
+		var birthDay = document.getElementById("db").value;
+	    var DOB = new Date(birthDay);
+	    var today = new Date();
+	    var age = today.getTime() - DOB.getTime();
+	    age = Math.floor(age / (1000 * 60 * 60 * 24 * 365.25));
+	       // alert(age);
+		document.getElementById("age").value=age;
+	}
+
+	</script>
+
+	<!--date -->
+	<script type="text/javascript">
+	const picker = new WindowDatePicker({
+	      el: '#picker',
+	      toggleEl: '#toggle',
+	      inputEl: '#db'
+	});</script>
+
+ <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>
+
+</body>
+</html>
