@@ -1,0 +1,317 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>form</title>
+	<title>Patient Profile</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/mdb.min.css" rel="stylesheet">
+	
+</head>
+
+
+<body>
+
+<!--<form action="#" method="post">-->
+	<center>
+		<div class="md-form">
+		<form class="border border-light p-5" style="width: 1000px; ">
+			<p class="h4 mb-4 text-center" style="">Medical History</p>
+		<div id="rpage">
+<table>
+<tr>
+	<td>Name:</td>
+		<td><input class="form-control mb-4" type="text" id="myname" onblur="validname()"style="height:25px;"></td><td><p id="namef"></p></td>
+		<td><p id="vname" style="font-size: 10px; display: inline; color: white;">Invalidnssame</p></td>
+		
+	<td>DateofBirth</td>
+		<td><input class="form-control mb-4" style="width:167px;height:25px;"type="date" id="db" size="700"></td>
+</tr>
+<tr> <td>Gender:</td>
+		<td><input type="radio" name="gender" value="male" > Male
+  <input type="radio" name="gender" value="female"> Female<br></td>
+	<td>&nbsp </td><td> &nbsp </td>
+	<td>Age</td><td><input class="form-control mb-4" type="int"  id="age" onblur="validage()"style="height:25px;"></td>   </tr> 
+	
+	
+	<tr>&nbsp;</tr><tr>&nbsp;</tr>
+	<tr>
+	<td>Email:</td>
+		<td><input class="form-control mb-4" type="text" id="email" onblur="validemail()"style="height:25px;"></td><td><p id="namef"></p></td>
+		<td><p id="vemail" style="font-size: 10px; display: inline; color: white;">vvsbbbbb</p></td>
+	
+	<td>Phone.no:</td>
+		<td><input class="form-control mb-4" type="tel" id="phno" onblur="validphno()"style="height:25px;"></td><td><p id="namef"></p></td>
+		<td><p id="vphno" style="font-size: 10px; display: inline; color: white;">xbbcbbud</p></td>
+	</tr><tr>&nbsp;</tr><tr>&nbsp;</tr>
+	<tr><td>Height<br>(in feet and inches)</td>
+	<td><input class="form-control mb-4" type="float"  style="width:167px;height:25px;"></td>
+	
+	<td>&nbsp;</td><td>&nbsp;</td>
+	<td>Weight<br>(in feet and inches)</td>
+	<td><input class="form-control mb-4" type="float"  style="width:167px;height:25px;"></td>
+	</tr>
+	<tr>&nbsp;</tr><tr>&nbsp;</tr>
+	<tr><td>Blood Group</td><td> 
+
+	 <select class="browser-default custom-select mb-4" name="group" size="1"style="width:167px;">
+			<option value="" disabled="" selected="">--Select--</option>
+			<option>O+</option>
+			<option>O-</option>
+			<option>A+</option>
+			<option>A-</option>
+			<option>B+</option>
+			<option>B-</option>
+			<option>AB+</option>
+			<option>AB-</option>
+		</select>
+	</td>
+	</tr><tr>&nbsp;</tr><tr>&nbsp;</tr>
+	</table>
+	       
+	<table>  
+	
+	<tr><td style="width:380px">When was your last visit?</td>   
+	<td> <input class="form-control mb-4" style="width:310px;height:25px;"type="date" id="db" size="700"> </td></tr>
+	<tr>&nbsp </tr><tr>&nbsp </tr>
+	<tr><td style="width:380px">Do you smoke?</td><td><input type="radio" name="ab" value="yes">Yes
+<input type="radio" name="ab" value="no" >No</td></tr><br>
+<tr>&nbsp </tr><tr>&nbsp </tr>
+<tr><td style="width:380px">Have you ever been hospitalized or <br>had any serious illness?</td>   
+	<td><input type="radio" name="cd" value="yes">Yes
+<input type="radio" name="cd" value="no" >No</td></tr>
+<tr>&nbsp </tr><tr>&nbsp </tr>
+<tr><td style="width:380px">Have you had any reactions<br>to any medications?</td>   
+<td><input class="form-control mb-4" type="text" cols="40" rows="50"style="width:310px; height:50px;" name="Text1"  id="Text1"  value="" /></td>
+<tr>&nbsp </tr><tr>&nbsp </tr>
+<tr><td style="width:380px">Are you taking any	<br>any medication at present?</td>   
+<td><input type="radio" name="cd" value="yes">Yes
+<input type="radio" name="cd" value="no" >No</td></td>
+<tr>&nbsp </tr><tr>&nbsp </tr>
+<tr><td style="width:380px">If you're taking any medication,	<br> please list them here:</td>   
+<td><input class="form-control mb-4" type="text" cols="40" rows="50"style="width:310px; height:50px;" name="Text1"  id="Text1"  value="" /></td
+<tr>&nbsp </tr><tr>&nbsp </tr>
+<tr><td style="width:380px">Choose the appropriate  </td>   
+<td><input type="checkbox" name="Text1"  id="1"   >Diabetes
+<input type="checkbox" name="Text1"  id="2"   >Heart Disease 
+<input type="checkbox" name="Text1"  id="3"   >High blood pressure<br>
+<input type="checkbox" name="Text1"  id="4"   >Hepatitis ABC
+<input type="checkbox" name="Text1"  id="5"   >Epilepsy<br>
+</td>
+<tr>&nbsp </tr><tr>&nbsp </tr>
+<tr><td style="width:380px">Have you experienced any 	<br>chest pains,dizziness or fainting</td>   
+<td><input  type="radio" name="ef" value="yes">Yes
+<input type="radio" name="ef" value="no" >No</td
+<tr>&nbsp </tr><tr>&nbsp </tr>
+
+	</table>
+</form>
+</div>
+</center>
+
+</div>
+<br><br><br><br>
+<div>
+
+</div>
+<script type="text/javascript">
+		function test1()
+		{
+			var mn=document.getElementById("myname").value;
+		    var actualname=/^[a-zA-Z]+$/;
+		    var un=document.getElementById("uname").value;
+			var actualuname=/^[a-zA-Z]+[a-zA-Z0-9]/;
+			var pw=document.getElementById("pword").value;
+			var cpw=document.getElementById("cpword").value;
+			var em=document.getElementById("email").value;
+			var pn=document.getElementById("phno").value;
+			
+			var pn1=document.getElementById("phno1").value;
+			var len=pw.length;
+			var len1=un.length;
+		    if(!actualname.test(mn))   {    alert("Please enter a valid name");     }
+		else{
+			if(!actualuname.test(un) && len1>6 && len1<30){     alert("Please enter a valid username");      }
+		else{
+			if(len<6){
+				alert("Short password");
+		         }
+		else if(len>15)
+		{
+			console.log("long");
+				alert("Long password");
+		}
+		else{
+				var actualpword=/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))/;
+				if(!actualpword.test(pword))
+				{
+				
+					alert("Password too weak!");
+				}
+				else{
+					if(cpw!=pw){alert("Please give same password in the 2 feilds.")}
+						else{
+							var actualem=/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+							if(!actualem.test(em))
+							{
+								alert("Enter valid email id!")
+							}
+						else{
+							var actualpn=/^[0-9]{10}$/;
+							if(!actualpn.test(pn)){alert("Enter valid phone number!")}
+						else{
+						var actualpn1=/^[0-9]{10}$/;
+							if(!actualpn1.test(pn1)){alert("Enter valid phone number!")}
+						else{
+										alert("Registration successful");
+								
+								//window.location = "main2.html"; // Redirecting to other page.
+									//return false;
+		
+									
+		}
+		}
+		}
+		}
+		}
+	}
+	}
+}
+}
+function validname()
+{
+	var mn=document.getElementById("myname").value;
+		    var actualname=/^[a-zA-Z]+$/;
+		    if(!actualname.test(mn))   {  var hp1=document.getElementById("vname");
+		    hp1.style.color="black";  
+		    	document.getElementById("vname").innerHTML="Invalid name.";     }
+		    else
+		    {
+		    	document.getElementById("vname").innerHTML="cnnnnd"; 
+		    }
+}
+function validuname()
+{
+	var un=document.getElementById("uname").value;
+			var actualuname=/^[a-zA-Z]+[a-zA-Z0-9]/;
+			if(!actualuname.test(un)){
+			var hp1=document.getElementById("vuname");
+		    hp1.style.color="black";  
+				document.getElementById("vuname").innerHTML="Invalid username.";       }
+			else
+			{
+				document.getElementById("vuname").innerHTML="";
+			}
+
+}
+function validpword()
+{
+	var pw=document.getElementById("vpword").value;
+	var actualpword=/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))/;
+				if(!actualpword.test(pword))
+				{
+					document.getElementById("vpword").innerHTML="Password too weak!";
+				}
+				else
+			{
+				document.getElementById("vpword").innerHTML="";
+			}
+}
+function validcpword()
+{
+	var pw=document.getElementById("pword").value;
+			var cpw=document.getElementById("cpword").value;
+			if(cpw!=pw)
+			{
+				var hp1=document.getElementById("vcpword");
+		    hp1.style.color="black";  
+				document.getElementById("vcpword").innerHTML="Enter valid password";
+			}
+			else{
+				document.getElementById("vcpword").innerHTML="";
+			}
+}
+function validemail()
+{
+	var em=document.getElementById("email").value;
+	var actualem=/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$/;
+							if(!actualem.test(em))
+							{
+								var hp1=document.getElementById("vemail");
+		    hp1.style.color="black";  
+								document.getElementById("vemail").innerHTML="Invalid email";
+							}
+							else
+							{
+								document.getElementById("vemail").innerHTML="";
+							}
+}
+function validphno()
+{
+	var pn=document.getElementById("phno").value;
+	var actualpn=/^[0-9]{10}$/;
+							if(!actualpn.test(pn))
+							{
+								var hp1=document.getElementById("vphno");
+		    hp1.style.color="black";  
+								document.getElementById("vphno").innerHTML="Invalid phone number";
+							}
+							else {document.getElementById("vphno").innerHTML="";}
+}
+function validphno1()
+{
+	var pn=document.getElementById("phno1").value;
+	var actualpn=/^[0-9]{10}$/;
+							if(!actualpn.test(pn))
+							{
+								var hp1=document.getElementById("vphno1");
+		    hp1.style.color="black";  
+								document.getElementById("vphno1").innerHTML="Invalid phone number";
+							}
+							else {document.getElementById("vphno1").innerHTML="";}
+}
+function validaddress()
+{
+	var mn=document.getElementById("Text1").value;
+		    var actualname=/^[a-zA-Z]+$/;
+		    if(!actualname.test(mn))   {  var hp1=document.getElementById("vadd");
+		    hp1.style.color="black";  
+		    	document.getElementById("vadd").innerHTML="Invalid address.";     }
+		    else
+		    {
+		    	document.getElementById("vadd").innerHTML="cnnnnd"; 
+		    }
+}
+function validage()
+{
+
+
+        var birthDay = document.getElementById("db").value;
+        var DOB = new Date(birthDay);
+        var today = new Date();
+        var age = today.getTime() - DOB.getTime();
+        age = Math.floor(age / (1000 * 60 * 60 * 24 * 365.25));
+       // alert(age);
+      
+   
+document.getElementById("age").value=age;
+	
+	}
+	
+</script>
+<!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.js"></script>\
+</body>
+</html>
