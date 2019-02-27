@@ -1,0 +1,83 @@
+{%extends "first_nav.html" %}
+{% block content %}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h4 style="color: white;"><center>Login here: </center></h4>
+<!--<form action="#" method="post">-->
+	<form action="http://localhost:5000/d_mypage" method="post" >
+		<center>
+			<div id="rpage">
+				<br /><br /><br /><br />
+				<b>Username:</b>
+				<input type="text" name="d_email" id="name" value="uname" onblur="validname()">
+				<p id="vname" style="font-size: 10px;"></p>
+				<br /><br /><br />
+				<b>Password:</b>
+				<input type="password" name="d_pass" id="pword" value="pword" onblur="validpword()">
+				<p id="vpword" style="font-size: 10px; "></p>
+				<br /><br /><br />
+				<input type="submit" value="Login" onclick="test1()" id="vsubmit">
+				<p id="success"></p>
+			</table>
+		</div>
+	</center>
+</form>
+</div>
+<script type="text/javascript">
+	
+
+								function new_pg()
+								{	window.location.href = "http://www.google.com";
+
+							}
+
+							function validname()
+							{
+								var mn=document.getElementById("name").value;
+								var actualname=/^[a-zA-Z]+$/;
+								if(!actualname.test(mn))   {  var hp1=document.getElementById("vname");
+								hp1.style.color="black";  
+								document.getElementById("vname").innerHTML="Invalid name.";     }
+								else
+								{
+									document.getElementById("vname").innerHTML=""; 
+								}
+							}		 
+
+							function validpword()
+							{
+								var pw=document.getElementById("pword").value;
+								var len=pw.length;
+								
+		    if(len<6)
+			{
+
+				var hp1=document.getElementById("vname");
+								hp1.style.color="black";  
+				document.getElementById("vpword").innerHTML="Short password";
+			}
+			else if(len>15)
+			{
+				var hp1=document.getElementById("vname");
+								hp1.style.color="black";  
+			document.getElementById("vpword").innerHTML="Long password";
+			}
+			else
+			{
+				var hp1=document.getElementById("vname");
+								hp1.style.color="black";  
+				var actualpword=/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))/;
+				if(!actualpword.test(pw))
+				{
+
+					alert("Password weak!");
+				}
+				else
+				{
+
+					document.getElementById("vpword").innerHTML="";
+				}
+						
+								}
+							}
+						</script>
+						{% endblock content %}

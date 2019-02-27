@@ -1,0 +1,85 @@
+{%extends "first_nav.html" %}
+{% block content %}
+
+		       	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h4 style="color: white;"><center>Login here: </center></h4>
+<!--<form action="#" method="post">-->
+	<center>
+		<div id="rpage">
+<br /><br /><br /><br />
+	<b>Name:</b>
+		<input type="text" id="name" onblur="validname()">
+		<p id="vname" style="font-size: 10px;"></p>
+		<br /><br /><br />
+	<b>Password:</b>
+		<input type="password" id="pword" onblur="validpword()">
+		<p id="vpword" style="font-size: 10px; "></p>
+	<br /><br /><br />
+	<input type="submit" value="Login" onclick="test1()" id="vsubmit">
+	<p id="success"></p>
+</table>
+</div>
+</center>
+</div>
+<script type="text/javascript">
+	function test1()
+		{
+			var mn=document.getElementById("name").value;
+		    var actualname=/^[a-zA-Z]+$/;
+			
+var pw=document.getElementById("pword").value;
+var len=pw.length;
+			  if(!actualname.test(mn))   {    alert("Please enter a valid name");     }
+		else{
+		
+			if(len<6){
+				alert("Short password");
+		         }
+		else if(len>15)
+		{
+			console.log("long");
+				alert("Long password");
+		}
+		
+		else
+		{
+				var actualpword=/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))/;
+				if(!actualpword.test(pw))
+				{
+				
+					alert("Password weak!");
+				}
+			 
+			else{
+										alert("Registration successful"); 
+			 
+			 }}}}
+			 
+			 
+	function validname()
+{
+	var mn=document.getElementById("name").value;
+		    var actualname=/^[a-zA-Z]+$/;
+		    if(!actualname.test(mn))   {  var hp1=document.getElementById("vname");
+		    hp1.style.color="black";  
+		    	document.getElementById("vname").innerHTML="Invalid name.";     }
+		    else
+		    {
+		    	document.getElementById("vname").innerHTML=""; 
+		    }
+}		 
+			 
+	function validpword()
+{
+	var pw=document.getElementById("pword").value;
+	var actualpword=/^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))/;
+				if(!actualpword.test(pw))
+				{
+					document.getElementById("vpword").innerHTML="Password too weak!";
+				}
+				else
+			{
+				document.getElementById("vpword").innerHTML="";
+			}
+}
+			 </script>
+{% endblock content %}

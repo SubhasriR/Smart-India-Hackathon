@@ -1,0 +1,105 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Material Design Bootstrap</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='mdb.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='nav.css') }}" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <!-- Start your project here-->
+ 
+
+<!--Main Navigation-->
+<header>
+<!--Navbar -->
+<nav class="topnav mb-1 navbar navbar-expand-lg">
+  <a class="navbar-brand">Navbar NAvbar Navbar Na</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="activetop nav-link waves-effect waves-brown waves-ripple button" href="#">Home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-brown waves-ripple button" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-effect waves-brown waves-ripple button" href="#">Pricing</a>
+      </li>
+     </ul>
+     <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle waves-effect waves-brown waves-ripple button" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">Dropdown
+        </a>
+        <div class="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link waves-effect waves-brown waves-ripple button" href="#">Features</a>
+      </li>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle waves-effect waves-brown waves-ripple button" id="navbarDropdownMenuLink-333" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="fas fa-user"></i>Subhasri
+        </a>
+        <div class="dropdown-menu dropdown-menu-right dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="#">Logout</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--/.Navbar -->
+</header>
+<!--Main Navigation-->
+<nav class="sidenav navbar" style=" background-image: url('https://mdbootstrap.com/img/Photos/Slides/2.jpg');
+  background-size: cover; 
+  background-position: bottom; 
+  background-repeat: no-repeat;  " >
+<div style="background: rgba(255,255,255,0.6); height: 100%; width:100% ;">
+ <a style="font-size: 60px; border:none; padding-top: 30px; color: black;" href="#"><strong>PHC</strong></a><br>
+  <a class="activeside nav-link waves-effect waves-brown waves-ripple button" href="#about">Doctor Availability<br>
+    <i class="fas fa-calendar-check fa-3x"></i></i></a><br>
+  <a class="nav-link waves-effect" href="{{ url_for('p_loginpage')}}">Schedule Appointments<br><i class="fas fa-clipboard-list fa-3x"></i></a><br>
+  <a class="nav-link waves-effect" href="{{ url_for('p_loginpage') }}">Patient Portal<br><i class="fas fa-user-injured fa-3x"></i></a><br>
+  <a class="nav-link waves-effect " href="{{ url_for('d_loginpage') }}">Doctor Portal<br><i class="fas fa-comments fa-3x"></i></a>
+</div>
+</nav>
+
+<!--Main Layout-->
+  <!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+{% block content %} {% endblock%}
+
+    <script type="text/javascript" src ="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+    <script type="text/javascript" src ="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <script type="text/javascript" src ="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src ="{{ url_for('static', filename='js/mdb.js') }}"></script><div class="hiddendiv common"></div>
+
+</body>
+</html>
