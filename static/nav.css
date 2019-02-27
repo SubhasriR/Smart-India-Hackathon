@@ -1,0 +1,82 @@
+
+  .waves-effect.waves-brown .waves-ripple {
+   /* The alpha value allows the text and background color
+   of the button to still show through. */
+    background-color: rgba(121, 85, 72, 0.65);
+  }
+  
+@media (min-width: 768px) {
+    .view {
+        overflow: visible;
+        margin-top: -56px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #4285F4;
+    }
+}
+
+.sidenav {
+  height: 100%;
+  width: 253px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding: 0px;
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 22px;
+  color: #585858  ;
+  display: block;
+  height: 17%;
+  text-align: center;
+   border: solid #fff 1px;
+   border-radius: 10px;
+  border-spacing: 50px;
+}
+
+.sidenav a:hover {
+  color: black;
+  transform: scale(1.1);
+}
+
+.topnav a:hover {
+  background-color: rgba(228, 241, 254, 1);
+    border-radius: 15px;
+      transform: scale(1.1);
+
+
+}
+
+.topnav a{
+  text-decoration: none;
+  color: black;
+}
+
+.activetop{
+  background-color: rgba(228, 233, 237, 1);
+  border-radius: 15px;
+}
+
+.activeside{
+  background-color: white;
+}
+
+
+.main {
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px; position: relative;}
+  .sidenav a {font-size: 18px;}
+}
+ 
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
